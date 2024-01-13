@@ -1,0 +1,32 @@
+<main>
+  {{#if hasProduct}}
+    <div class="grid">
+      {{#each prods}}
+        <article class="card product-item">
+          <header class="card__header">
+            <h1 class="product__title">
+              {{this.title}}
+            </h1>
+
+          </header>
+          <div class="car__image">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*YMJDp-kqus7i-ktWtksNjg.jpeg"
+              alt="book"
+            />
+          </div>
+          <div class="card__content">
+            <h2 class="product__price">$19.34</h2>
+          </div>
+          <div class="car_actions">
+            <button class="btn">Add to Cart</button>
+          </div>
+        </article>
+      {{/each}}
+    </div>
+  {{ else }}
+    <h1>
+      No PRoduct
+    </h1>
+  {{/if}}
+</main>

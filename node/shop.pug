@@ -1,0 +1,60 @@
+extends layouts/main-layout.pug
+
+block styles
+    link(rel="stylesheet", href="/css/product.css")
+    link(rel="stylesheet", href="/css/forms.css")
+block content
+    main
+            if prods.length > 0
+                .grid
+                each product in prods
+                    article.card.product-item
+                        header.card__header
+                            h1.product__title #{product.title}
+                        div.card__image 
+                            img(src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*YMJDp-kqus7i-ktWtksNjg.jpeg" alt="A book")
+                        div.card__content
+                            h2.product__price $19.23
+                            p SHFHDGHBHTGUHFBSDGFVISDBFV 
+                        .card__actions
+                            button.btn Add to Card
+            else
+                h1 No Products
+
+
+
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         title #{docTitle}
+//-         link(rel="stylesheet",href="/css/main.css")
+//-         link(rel="stylesheet",href="/css/product.css")
+//-     body 
+//-         header.main-header
+//-             nav.main-header__nav
+//-                 ul.main-header__item-list
+//-                     li.main-header__item    
+//-                         a.active(href="/") shop 
+//-                     li.main-header__item 
+//-                         a(href="/add-product") Add Product
+
+//-         main
+//-             if prods.length > 0
+//-                 .grid
+//-                 each product in prods
+//-                     article.card.product-item
+//-                         header.card__header
+//-                             h1.product__title #{product.title}
+//-                         div.card__image 
+//-                             img(src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*YMJDp-kqus7i-ktWtksNjg.jpeg" alt="A book")
+//-                         div.card__content
+//-                             h2.product__price $19.23
+//-                             p.SHFHDGHBHTGUHFBSDGFVISDBFV 
+//-                         .card__actions
+//-                             button.btn Add to Cart
+
+//-             else
+//-                 h1 No Products
+
